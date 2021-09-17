@@ -6,7 +6,7 @@ This project is based on a simple idea :
 
 > Blazor is relatively new and with the community experience, we could together create Blazor guidelines.
 
-## How it works and jow to contribute?
+## How it works and how to contribute?
 
 **This project is discussion based**
 
@@ -20,4 +20,7 @@ This project is owned by :
 
 * Adrien Clerbois @AClerbois
 * Denis Voituron @Dvoituron
-* Chirstophe Peugnet @Tossnet
+* Christophe Peugnet @Tossnet
+
+## Code of Conduct
+This project has adopted the code of conduct defined by the Contributor Covenant to clarify expected behavior in our community. For more information, see the [Code of Conduct.](https://github.com/Apps72/BlazorGuidelines/blob/main/CODE_OF_CONDUCT.md)
