@@ -11,13 +11,24 @@ This project is based on a simple idea :
 From our experience, we have chosen not to use the ```@code``` element in files with the ```.razor``` extension. 
 C# code should be in the ```.razor.cs``` file provided for this purpose.
 
-> Discussion via issue #2
+Discussion via issue Discussion via [issue #2](https://github.com/Apps72/BlazorGuidelines/issues/2)
+
+## Add injection via Code Behind
+
+The .razor is only used for the design part and the layout of this HTML design (via loops and Razor tests).
+Put all the code in the "Code Behind" file, including properties injected (using private accessor). 
+All attributes are above of the property/method.
+
+```csharp
+[Inject]
+private IMemoryCache MemoryCache { get; set; }
+```
 
 ## - Send HTML as soon as possible
 
 For example, if you have a component that is linked to a sub-property, **it is better to set default values for all linked properties**, instead of testing the initial variable. 
 
-```html
+```razor
 // DON'T USE
 @if (MyData != null)
 {
@@ -25,7 +36,7 @@ For example, if you have a component that is linked to a sub-property, **it is b
 }
 ```
 
-```html
+```razor
 // PREFERS
 <input type="text" value="MyData.Firstname">
 
@@ -42,7 +53,19 @@ which is not ergonomically pleasant for the user.
 
 Th easy way to do that, is to bind to empty objects... including all sub properties must be defined.
 
-> Discussion via issue #11
+Discussion via [issue #11](https://github.com/Apps72/BlazorGuidelines/issues/11)
+
+## - Abuse of CSS isolation
+
+It is preferable to use as much as possible a css / .razor.
+
+```
+MyPage.razor
+  \-- MyPage.razor.cs
+  \-- MyPage.razor.css
+```
+
+Discussion via [issue #4](https://github.com/Apps72/BlazorGuidelines/issues/4)
 
 # How it works and how to contribute?
 
