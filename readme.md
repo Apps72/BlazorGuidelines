@@ -6,7 +6,45 @@ This project is based on a simple idea :
 
 > Blazor is relatively new and with the community experience, we could together create Blazor guidelines.
 
-## How it works and how to contribute?
+## - C# code in the .razor.cs
+
+From our experience, we have chosen not to use the ```@code``` element in files with the ```.razor``` extension. 
+C# code should be in the ```.razor.cs``` file provided for this purpose.
+
+> Discussion via issue #2
+
+## - Send HTML as soon as possible
+
+For example, if you have a component that is linked to a sub-property, **it is better to set default values for all linked properties**, instead of testing the initial variable. 
+
+```html
+// DON'T USE
+@if (MyData != null)
+{
+    <input type="text" value="MyData.Firstname">
+}
+```
+
+```html
+// PREFERS
+<input type="text" value="MyData.Firstname">
+
+@code 
+{
+     MyData MyData { get; set; } = new MyData();
+}
+```
+
+This allows Blazor to send the HTML code to the client who can display it. 
+Then Blazor, via SignalR, will update the content of the component that is already drawn.
+Otherwise, an empty page is displayed to the user, while the whole component is known... 
+which is not ergonomically pleasant for the user.
+
+Th easy way to do that, is to bind to empty objects... including all sub properties must be defined.
+
+> Discussion via issue #11
+
+# How it works and how to contribute?
 
 **This project is discussion based**
 
