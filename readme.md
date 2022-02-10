@@ -24,6 +24,8 @@ All attributes are above of the property/method.
 private IMemoryCache MemoryCache { get; set; }
 ```
 
+Discussion via issue Discussion via [issue #1](https://github.com/Apps72/BlazorGuidelines/issues/1)
+
 ## - Send HTML as soon as possible
 
 For example, if you have a component that is linked to a sub-property, **it is better to set default values for all linked properties**, instead of testing the initial variable. 
