@@ -172,7 +172,7 @@ public IConnectionManager Connection { get; set; } = default!;
 
 # ❔How it works and how to contribute?
 
-** 🔹This project is discussion based**
+## 🔹This project is discussion based
 
 In order to put values on this guidelines, you need to create an issue and a context to allow understand your lines. 
 
