@@ -1,4 +1,4 @@
-# Blazor Guidelines
+# 📄 Blazor Guidelines 📄
 
 A set of coding guidelines for Microsoft Blazor projects, design principles and layout rules for improving the overall quality of your code development.
 
@@ -16,7 +16,7 @@ This part of the document is mainly based...
 
 - A component's name uses Pascal case. For example, `ProductDetailPage.razor` is valid.
 
-## Component Structure
+## 🔸Component Structure
 
 Organize files and components in a folder structure like this. This makes it easy to find the code related to a page, without having to browse the entire file explorer. Try, as much as possible, to respect the [SOLID](https://en.wikipedia.org/wiki/SOLID) principles. Mainly by creating autonomous and extensible components: inject the smallest possible service or parameter, manage all the possibilities offered by the component. For example, a data modification page should display the data, check their values and save the data at the end of the process.
 
@@ -170,15 +170,15 @@ public IConnectionManager Connection { get; set; } = default!;
 
 
 
-# How it works and how to contribute?
+# ❔How it works and how to contribute?
 
-**This project is discussion based**
+** 🔹This project is discussion based**
 
 In order to put values on this guidelines, you need to create an issue and a context to allow understand your lines. 
 
 When it's validated by the community, you can then create a pull request to add values on this project.
 
-## Owners
+## 🔹Owners
 
 This project is owned by : 
 
@@ -186,5 +186,5 @@ This project is owned by :
 * Denis Voituron @Dvoituron
 * Christophe Peugnet @Tossnet
 
-## Code of Conduct
+## 🔹Code of Conduct
 This project has adopted the code of conduct defined by the Contributor Covenant to clarify expected behavior in our community. For more information, see the [Code of Conduct.](https://github.com/Apps72/BlazorGuidelines/blob/main/CODE_OF_CONDUCT.md)
