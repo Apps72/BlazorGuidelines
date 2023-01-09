@@ -167,8 +167,20 @@ Since the project has been defined as accepting nullables, it is recommended to 
 public IConnectionManager Connection { get; set; } = default!;
 ```
 
+## 🔸Align the attributes 
 
-
+To Improve reading in a razor page, align all attributes of Blazor Component or HTML Tags  :
+```
+<MudTextField T="string" 
+              MaxLength="200" 
+              @bind-Value="demoAccount.Email" 
+              InputType="InputType.Email" 
+              Label="Email" 
+              Margin="Margin.Dense" 
+              autocomplete="off"  />
+	      
+```
+Discussion via [issue #12](https://github.com/Apps72/BlazorGuidelines/issues/12)
 
 # ❔How it works and how to contribute?
 
